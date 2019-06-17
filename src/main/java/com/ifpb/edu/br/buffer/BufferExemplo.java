@@ -54,8 +54,8 @@ public class BufferExemplo implements Buffer {
             valorLido = buff[lerIndice];
             lerIndice = (lerIndice + 1) % buff.length;
             buffersOcupados--;
-            System.out.println("Consumidor lê:"+ valorLido);
-           
+            System.out.println("Consumidor lê:" + valorLido);
+
             PermissaoGravar.signal();
         } catch (InterruptedException exception) {
             exception.printStackTrace();
@@ -65,5 +65,4 @@ public class BufferExemplo implements Buffer {
         return valorLido;
     }
 
-   
 }
